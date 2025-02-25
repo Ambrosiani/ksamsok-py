@@ -88,7 +88,7 @@ class KSamsok:
             i_lowres = image.xpath('.//pres_src[@type=\'lowres\']')
             parsed_image['lowres'] = i_lowres[0].text if 0 < len(i_lowres) else None
 
-            i_highres = image.xpath('.//pres_src[typec=\'highres\']')
+            i_highres = image.xpath('.//pres_src[@type=\'highres\']')
             parsed_image['highres'] = i_highres[0].text if 0 < len(i_highres) else None
 
             i_by_line = image.xpath('.//pres_byline')
